@@ -6,6 +6,6 @@ public class FilmConstructor {
 
     public FilmConstructor(int id, String nameFilm) {
         this.id = id;
-        this.nameFilm = nameFilm;
+        this.nameFilm = nameFilm; 
     }
 }

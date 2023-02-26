@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class TestManagerClass {
-    MoviesManager manager = new MoviesManager();
     FilmConstructor movies1 = new FilmConstructor(1, "Film1");
     FilmConstructor movies2 = new FilmConstructor(2, "Film2");
     FilmConstructor movies3 = new FilmConstructor(3, "Film3");

@@ -11,6 +11,7 @@ public class MoviesManager {
     }
 
     public MoviesManager() {
+
     }
 
 

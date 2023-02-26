@@ -37,18 +37,6 @@ class TestManagerClass {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void shouldAddFilmLast() {
-        MoviesManager manager = new MoviesManager(3);
-        manager.addFilm(movies8);
-        manager.addFilm(movies9);
-        manager.addFilm(movies10);
-
-        FilmConstructor[] expected = {movies10, movies9, movies8};
-        FilmConstructor[] actual = manager.findlast();
-
-        Assertions.assertArrayEquals(expected, actual);
-    }
 
     @Test
     public void shouldAllMovies() {
@@ -87,6 +75,26 @@ class TestManagerClass {
     }
 
     @Test
+    public void shouldAddFilmLastOne() {
+        MoviesManager manager = new MoviesManager(1);
+        manager.addFilm(movies1);
+
+        FilmConstructor[] expected = {movies1};
+        FilmConstructor[] actual = manager.findlast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldAddFilmLastNoneLimit() {
+        MoviesManager manager = new MoviesManager(0);
+        FilmConstructor[] expected = {};
+        FilmConstructor[] actual = manager.findlast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
     public void shouldAddFilmLastLimit() {
         MoviesManager manager = new MoviesManager(10);
         manager.addFilm(movies1);
@@ -105,6 +113,7 @@ class TestManagerClass {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldFilmLastNine() {
         MoviesManager manager = new MoviesManager(9);
@@ -119,6 +128,19 @@ class TestManagerClass {
         manager.addFilm(movies9);
 
         FilmConstructor[] expected = {movies9, movies8, movies7, movies6, movies5, movies4, movies3, movies2, movies1};
+        FilmConstructor[] actual = manager.findlast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldAddFilmLast() {
+        MoviesManager manager = new MoviesManager(3);
+        manager.addFilm(movies8);
+        manager.addFilm(movies9);
+        manager.addFilm(movies10);
+
+        FilmConstructor[] expected = {movies10, movies9, movies8};
         FilmConstructor[] actual = manager.findlast();
 
         Assertions.assertArrayEquals(expected, actual);
